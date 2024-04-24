@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseBloggingContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BlogSet">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Owner" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Rank" Type="Int32" />
+    <NavigationProperty Name="PostSets" Relationship="Self.FK_BlogPost" FromRole="BlogSets" ToRole="PostSets" />
+  </EntityType>
+  <EntityType Name="PostSet">
+    <Key>
+      <PropertyRef Name="PostId" />
+    </Key>
+    <Property Name="PostId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BlogBlogId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BlogSet" Relationship="Self.FK_BlogPost" FromRole="PostSets" ToRole="BlogSets" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_BlogPost">
+    <End Role="BlogSets" Type="Self.BlogSet" Multiplicity="1" />
+    <End Role="PostSets" Type="Self.PostSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BlogSets">
+        <PropertyRef Name="BlogId" />
+      </Principal>
+      <Dependent Role="PostSets">
+        <PropertyRef Name="BlogBlogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseBloggingContextEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BlogSets" EntityType="Self.BlogSet" />
+    <EntitySet Name="PostSets" EntityType="Self.PostSet" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_BlogPost" Association="Self.FK_BlogPost">
+      <End Role="BlogSets" EntitySet="BlogSets" />
+      <End Role="PostSets" EntitySet="PostSets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\controllers\\blogsetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\controllers\\blogsetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\views\\blogsets\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\views\\blogsets\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\views\\postsets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\views\\postsets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\views\\postsets\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\views\\postsets\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\controllers\\postsetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\controllers\\postsetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\views\\blogsets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\views\\blogsets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\views\\blogsets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\views\\blogsets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|d:\\a_food\\kh2_n3\\udwebnangcao\\thithu\\thithu\\models\\postset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8772C1B3-6009-4E0E-9FF8-DE8EC977859F}|ThiThu\\ThiThu.csproj|solutionrelative:thithu\\models\\postset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 321,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\BlogSets\\Delete.cshtml",
+              "RelativeDocumentMoniker": "ThiThu\\Views\\BlogSets\\Delete.cshtml",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\BlogSets\\Delete.cshtml",
+              "RelativeToolTip": "ThiThu\\Views\\BlogSets\\Delete.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T11:29:10.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlogSetsController.cs",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Controllers\\BlogSetsController.cs",
+              "RelativeDocumentMoniker": "ThiThu\\Controllers\\BlogSetsController.cs",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Controllers\\BlogSetsController.cs",
+              "RelativeToolTip": "ThiThu\\Controllers\\BlogSetsController.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAADwv3cAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T08:21:08.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PostSetsController.cs",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Controllers\\PostSetsController.cs",
+              "RelativeDocumentMoniker": "ThiThu\\Controllers\\PostSetsController.cs",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Controllers\\PostSetsController.cs",
+              "RelativeToolTip": "ThiThu\\Controllers\\PostSetsController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwDwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T08:41:46.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "ThiThu\\App_Start\\RouteConfig.cs",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "ThiThu\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T11:07:56.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\PostSets\\Index.cshtml",
+              "RelativeDocumentMoniker": "ThiThu\\Views\\PostSets\\Index.cshtml",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\PostSets\\Index.cshtml",
+              "RelativeToolTip": "ThiThu\\Views\\PostSets\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T08:51:39.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\PostSets\\Delete.cshtml",
+              "RelativeDocumentMoniker": "ThiThu\\Views\\PostSets\\Delete.cshtml",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\PostSets\\Delete.cshtml",
+              "RelativeToolTip": "ThiThu\\Views\\PostSets\\Delete.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T11:36:57.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ThiThu\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ThiThu\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T09:12:28.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\BlogSets\\Index.cshtml",
+              "RelativeDocumentMoniker": "ThiThu\\Views\\BlogSets\\Index.cshtml",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\BlogSets\\Index.cshtml",
+              "RelativeToolTip": "ThiThu\\Views\\BlogSets\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T08:24:40.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\BlogSets\\Create.cshtml",
+              "RelativeDocumentMoniker": "ThiThu\\Views\\BlogSets\\Create.cshtml",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Views\\BlogSets\\Create.cshtml",
+              "RelativeToolTip": "ThiThu\\Views\\BlogSets\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T08:39:51.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PostSet.cs",
+              "DocumentMoniker": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Models\\PostSet.cs",
+              "RelativeDocumentMoniker": "ThiThu\\Models\\PostSet.cs",
+              "ToolTip": "D:\\A_FOOD\\KH2_N3\\UDWebNangCao\\ThiThu\\ThiThu\\Models\\PostSet.cs",
+              "RelativeToolTip": "ThiThu\\Models\\PostSet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T08:24:51.638Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

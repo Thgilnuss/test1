@@ -1,0 +1,80 @@
+﻿@model PagedList.IPagedList<ThiThu.Models.PostSet>
+@using PagedList.Mvc;
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+	@Html.ActionLink("Create New", "Create")
+
+	@using (Html.BeginForm("Index", "PostSets", FormMethod.Get))
+	{
+	<p>
+		@Html.Hidden("page", (object)ViewBag.page)
+		@Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+		@Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+		@Html.Hidden("size", (object)ViewBag.pageSize)
+	</p>
+}
+	</p>
+	<table class="table">
+		<tr>
+			@Html.Raw(ViewBag.Headings)
+			<th>
+				Nội dung
+			</th>
+			<th>
+				Ngày tạo
+			</th>
+			<th>
+				Thuộc bài viết
+			</th>
+			<th></th>
+		</tr>
+
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Title)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Content)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.CreatedDate)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.BlogSet.Name)
+				</td>
+				<td>
+					@Html.ActionLink("Edit", "Edit", new { id = item.PostId }) |
+					@Html.ActionLink("Details", "Details", new { id = item.PostId }) |
+					@Html.ActionLink("Delete", "Delete", new { id = item.PostId })
+				</td>
+			</tr>
+		}
+
+	</table>
+	<br />
+	<div class="row">
+		<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+			@using (Html.BeginForm("Index", "Postsets", FormMethod.Get))
+			{
+				<p>
+					Kích thước trang: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
+				</p>
+
+				@Html.Hidden("page", (object)ViewBag.page)
+				@Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+				@Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+			}
+		</div>
+		<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6 text-right">
+			Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+		</div>
+	</div>
+	@Html.PagedListPager(Model, page => Url.Action("Index", new { page, size = ViewBag.currentSize, sortProperty = ViewBag.sortProperty, sortOrder = ViewBag.SortOrder }))
