@@ -1,0 +1,257 @@
+a. Tạo dự án MVC tên là SoMay_MSSV_Ten (1 điểm)
+- create new project -> chọn ASP.Net Web Application (.Net Framework)-> đặt tên theo yêu cầu
+
+b. Tạo mô hình từ tập tin *.mdf hoặc *.sql hoặc bảng mô tả dữ liệu cho trước. (1 điểm)
+
+Cơ sở dữ liệu gồm 2 bảng Blog và Post với các thuộc tính, khóa, và liên kết khóa giống như bài Lab.
+
+- bài sẽ cho sẵn 2 tập tin có .mdf hoặc .sql điều đầu tiên phải chạy nó lên để lưu thông tin vào database
+- chuột phải vào model -> Add -> New Item -> chọn ADO.NET Entity Data Model -> Add
+- tùy vào cách làm mà chọn EF Design form Database hay là Code First From Database
+- cách 1 chọn EF Design form Database -> Next
+- Chọn New Connection
+- Ở Sever name điền (localdb)\MSSQLLocalDB hoặc là SQLEXPRESS rồi chọn database ở bên dưới chỗ select or enter a database name -> ấn Ok 
+- cứ chọn tiếp tục Next -> tới chỗ choose your database Objets and Setting -> chọn tích chọn 2 bảng cần làm Blogs với Posts
+- Ok hết các bảng hiện ra
+#### NHớ Rebuild lại bài
+- tiếp theo tạo cotroller cho post là blog
+	+ chọn Cotroller click chuột phải chọn Add -> cotroller -> chọn MVC 5 Cotroller with views, uisng Entity Framework 
+	-> Chọn model class Post -> chọn Dataclass là database -> chọn layout là ở mục ~/Views/Shared/_Layout.cshtml
+	làm tương tự vậy với Blog
+c. Việt hóa tất cả trường dữ liệu. (1 điểm)
+- muốn việt hóa các trường dữ liệu tạo ra một cs mới đặt tên là metadata.cs
+- ở model tạo 2 file metadata và PaticalClasses
+______________________________________________
+nội dung trong metadata là 
+ public class BlogMetadata
+ {
+     [StringLength(50)]
+     [Display(Name = "Tên")]
+     public string Name;
+
+     [StringLength(500)]
+     [Display(Name = "Mô tả")]
+     public string Description;
+
+     [StringLength(50)]
+     [Display(Name = "Chủ sở hữu")]
+     public string Owner;
+
+ }
+ public class PostMetadata
+ {
+     [StringLength(200)]
+     [Display(Name = "Tên đề tài")]
+     public string Title;
+
+     [StringLength(500)]
+     [Display(Name = "Bối cảnh")]
+     public string Content;
+
+     [Display(Name = "Ngày tạo")]
+     public DateTime CreatedDate;
+ }
+______________________________________
+PaticalClasses
+[MetadataType(typeof(BlogMetadata))]
+public partial class Blog
+{
+}
+[MetadataType(typeof(PostMetadata))]
+public partial class Post
+{
+}
+_________________________________________
+
+lưu lại vào chạy riêng file index.html ở blog là post click chuột phải chọn Views in Browser
+
+d. Chọn tên Blog có độ dài tối thiểu, tối đa từ 5 đến 20 ký tự, chọn tên Post có độ dài tối thiểu, tối đa từ 5 đến 50 ký tự. (1 điểm)
+
+* Lưu ý có thể về biến dãy dữ liệu như Range.
+làm dễ dàng thì đầu tiên ấn vào model chọn Blog hoặc là Post
+- muốn thêm 2 cái trên thì sẽ sử dụng sửa đổi metadata.cs
+public class BlogMetadata
+{
+    [Required(ErrorMessage = "Tên không được để trống")]
+    [StringLength(50, MinimumLength = 5, ErrorMessage = "Tên đề từ 5 đến 50 ký tự")]
+    [Display(Name = "Tên Blog")]
+    public string Name;
+
+    [StringLength(500, ErrorMessage = "Mô tả không được quá 500 ký tự")]
+    [Display(Name = "Mô tả")]
+    public string Description;
+
+    [StringLength(50, ErrorMessage = "Tên chủ sở hữu không được quá 50 ký tự")]
+    [Display(Name = "Chủ sở hữu")]
+    public string Owner;
+
+
+}
+public class PostMetadata
+{
+
+    [Required(ErrorMessage = "Tiêu đề không được để trống")]
+    [StringLength(50, MinimumLength = 5, ErrorMessage = "Tiêu đề từ 5 đến 50 ký tự")]
+    [Display(Name = "Tên đề tài")]
+    public string Title;
+
+    [Required(ErrorMessage = "Nội dung không được để trống")]
+    [StringLength(500, MinimumLength = 10, ErrorMessage = "Nội dung từ 10 đến 500 ký tự")]
+    [Display(Name = "Bối cảnh")]
+    public string Content;
+
+    [Display(Name = "Ngày tạo")]
+    [DataType(DataType.Date, ErrorMessage = "Ngày không hợp lệ")]
+    public DateTime CreatedDate;
+
+}
+nội dung bên trên gồm giới hạn kí tự lại là xuất lỗi khi ko thực hiện đúng
+chỉ là bổ sung
+[Required(ErrorMessage = "Tiêu đề không được để trống")]
+    [StringLength(50, MinimumLength = 5, ErrorMessage = "Tiêu đề từ 5 đến 50 ký tự")]
+là theo đúng yêu cầu
+
+e. Ghi thông điệp bắt lỗi bằng tiếng Việt cho câu d. (1 điểm)
+ở câu D trên đã làm sẵn câu dưới này
+
+f. Tạo chức năng tìm kiếm theo tên Blog trên trang Index của Blog. (2 điểm)
+Thêm này ở View/Blog/index.html
+@using (Html.BeginForm("Index", "Blog", FormMethod.Get))
+{
+    <p>
+        Tìm kiếm theo tên Blog: @Html.TextBox("searchString")
+        <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+
+ở class BlogCotroller sửa lại hàm ActionResult Index
+public ActionResult Index(string searchString)
+{
+    var blogs = from b in db.Blogs
+                select b;
+
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        blogs = blogs.Where(b => b.Name.Contains(searchString));
+    }
+
+    return View(blogs.ToList());
+}
+
+g. Sắp xếp dữ liệu Post theo tên Post. (2 điểm)
+- vô file view/post/index.html
+Thêm Dòng 
+@{
+    string title = Html.DisplayNameFor(model => model.Title).ToString();
+    string decodedTitle = System.Net.WebUtility.HtmlDecode(title);
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Blog.Name)
+        </th>
+        <th></th>
+    </tr>
+ở đoạn trên thay
+@Html.DisplayNameFor(model => model.Title)
+thành 
+ @Html.ActionLink(Html.Raw(decodedTitle).ToString(), "Index", new { sortOrder = ViewBag.TitleSortParam })
+và sau đó vào PostCotroller thay đổi ActionResult Index
+
+public ActionResult Index(string sortOrder)
+{
+    ViewBag.TitleSortParam = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+
+    var posts = from p in db.Posts.Include(p => p.Blog)
+                select p;
+
+    switch (sortOrder)
+    {
+        case "title_desc":
+            posts = posts.OrderByDescending(p => p.Title);
+            break;
+        default:
+            posts = posts.OrderBy(p => p.Title);
+            break;
+    }
+
+    return View(posts.ToList());
+}
+
+
+h. Tạo phân trang dữ liệu cho Post. (1 điểm)
+nhớ tải thêm pagelist vào tool - nuget và tải
+ở trang post đổi
+    public ActionResult Index(string sortOrder, int? page,string searchString, string currentFilter)
+     {
+    ViewBag.TitleSortParam = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+
+    var posts = from p in db.Posts.Include(p => p.Blog)
+                select p;
+
+    switch (sortOrder)
+    {
+        case "title_desc":
+            posts = posts.OrderByDescending(p => p.Title);
+            break;
+        default:
+            posts = posts.OrderBy(p => p.Title);
+            break;
+    }
+
+        ViewBag.CurrentSort = sortOrder;
+        if (searchString != null)
+        {
+            page = 1;
+        }
+        else
+        {
+            searchString = currentFilter;
+        }
+
+        ViewBag.CurrentFilter = searchString;
+
+        int pageSize = 1;
+        int pageNumber = (page ?? 1);
+        return View(posts.ToPagedList(pageNumber, pageSize));
+}
+vào index.html đổi dòng đầu tiên
+@model PagedList.IPagedList<tets.Models.Post>
+@using PagedList.Mvc
+một số khác cũng thay đổi như là 
+<tr>
+    <th>
+        @Html.ActionLink(Html.Raw(decodedTitle).ToString(), "Index", new { sortOrder = ViewBag.TitleSortParam })
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.First().Content)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.First().CreatedDate)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.First().Blog.Name)
+    </th>
+    <th></th>
+</tr>
+thì phải thêm First()
+dưới cùng cũng thay đổi là
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+chạy bài lên và xem kết quả
+
+############ nếu phân trang tìm kiếm và lọc thì vô trang này lấy cho dễ
+https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
